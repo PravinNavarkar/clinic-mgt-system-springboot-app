@@ -5,21 +5,20 @@ import com.example.mgt.service.ClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Component
 @RequestMapping("/clinics")
 public class ClinicController {
-
     @Autowired
     ClinicService clinicService;
 
     @PostMapping("/clinic")
     public ResponseEntity<?> addClinic(@RequestBody Clinic clinic){
-        return new ResponseEntity<>(clinicService.addClinic(clinic),HttpStatus.OK);
+        return new ResponseEntity<>(clinicService.addClinic(clinic),HttpStatus.CREATED);
     }
 
     @GetMapping("/")

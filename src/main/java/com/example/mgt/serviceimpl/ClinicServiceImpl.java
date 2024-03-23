@@ -4,12 +4,14 @@ import com.example.mgt.domain.Clinic;
 import com.example.mgt.repository.ClinicRepository;
 import com.example.mgt.service.ClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Repository
 public class ClinicServiceImpl implements ClinicService {
 
     @Autowired
