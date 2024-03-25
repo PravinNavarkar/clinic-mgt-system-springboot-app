@@ -22,6 +22,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
+                    // Create the deployment directory if it doesn't exist
+                    sh 'mkdir -p clinic-mgt-deploy'
+
                     // Copy the JAR file to the deployment directory
                     sh 'cp target/mgt-0.0.1-SNAPSHOT.jar clinic-mgt-deploy/'
 
