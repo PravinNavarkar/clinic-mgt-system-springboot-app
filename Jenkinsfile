@@ -11,7 +11,9 @@ pipeline {
             steps {
                 script {
                     // Build the Spring Boot application using Maven
-                    sh 'mvn clean package'
+                    // sh 'mvn clean package'
+                    sh "${MAVEN_HOME}/bin/mvn clean package"
+
                 }
             }
         }

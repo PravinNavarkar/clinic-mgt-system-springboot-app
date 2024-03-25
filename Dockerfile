@@ -1,10 +1,16 @@
-FROM jenkins/jenkins:latest
-
-USER root
+#FROM jenkins/jenkins:latest
+#
+#USER root
 
 # Install Maven
-RUN apt-get update && \
-    apt-get install -y maven && \
-    apt-get clean
+#RUN apt-get update && \
+#    apt-get install -y maven && \
+#    apt-get clean
+#
+#USER jenkins
 
+FROM jenkins/jenkins:latest
+USER root
+RUN apt-get update && apt-get install -y maven && apt-get clean
 USER jenkins
+
