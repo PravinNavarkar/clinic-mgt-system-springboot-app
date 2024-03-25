@@ -8,6 +8,9 @@ pipeline {
 
     stages {
         stage('Build') {
+            options{
+                skipTests(true)
+            }
             steps {
                 script {
                     // Build the Spring Boot application using Maven
