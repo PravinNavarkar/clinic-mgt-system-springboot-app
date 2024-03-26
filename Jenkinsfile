@@ -18,6 +18,14 @@ pipeline {
                 }
             }
         }
+         stage('Deploy') {
+                    steps {
+                        script {
+                            // Copy the JAR file to the deployment folder
+                            bat "xcopy /Y /Q target\\*.jar ${env.DEPLOYMENT_FOLDER}"
+                        }
+                    }
+                }
 
 //         stage('Deploy') {
 //             steps {
