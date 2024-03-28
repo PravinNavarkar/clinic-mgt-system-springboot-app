@@ -1,8 +1,5 @@
 pipeline {
-    //agent any
-    agent {
-            label 'windows'
-        }
+    agent any
 
     environment {
         MAVEN_HOME = 'C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6'
