@@ -12,7 +12,7 @@ pipeline {
                 script {
                     // Build the Spring Boot application using Maven
                     //sh 'mvn clean package'
-                    sh 'mvn clean package -DskipTests=true'
+                    bat 'mvn clean package -DskipTests=true'
                     // sh "${MAVEN_HOME}/bin/mvn clean package"
 
                 }
